@@ -15,7 +15,7 @@ resource "aws_ecs_task_definition" "express_yogendra_task" {
   container_definitions    = <<DEFINITION
   [
     {
-      "name": "pearlthoughts-task",
+      "name": "express-yogendra-task",
       "image": "${aws_ecr_repository.express_yogendra_ecr_repo.repository_url}",
       "essential": true,
       "portMappings": [
