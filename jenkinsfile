@@ -1,0 +1,11 @@
+pipeline{
+    agent any
+
+    stages{
+        stage('Code'){
+            steps{
+                git url: 'git@github.com:yogendra-kokamkar/Terraform_ECS_Express.git', branch: 'main'
+            }
+        }
+    }
+}
