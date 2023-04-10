@@ -12,6 +12,7 @@ pipeline{
             steps{
             sshagent(credentials: ['dockerEc2Server']) {
                 sh "pwd"
+             }
             }
         }
     }
