@@ -11,7 +11,7 @@ pipeline{
         stage('Connect to docker server'){
             steps{
             sshagent(credentials: ['DockerSshEc2']) {
-                sh "pwd"
+                sh "hostname"
              }
             }
         }
