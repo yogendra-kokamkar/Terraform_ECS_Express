@@ -33,5 +33,14 @@ pipeline{
               }
             }
         }
+
+        stage('Push to ECR'){
+            steps{
+            withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', credentialsId: 'aws_creds', usernameVariable: 'AWS_ACCESS_KEY_ID', passwordVariable: 'AWS_SECRET_ACCESS_KEY']]) {
+                sh "chmod 777 ecrpush.sh"
+                sh "./ecrpush.sh"
+            }
+            }
+        }
     }
 }
