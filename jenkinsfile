@@ -22,5 +22,16 @@ pipeline{
                 sh "docker images"
             }
         }
+
+        stage('ECR Setup'){
+            steps{
+            withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', credentialsId: 'aws_creds', usernameVariable: 'AWS_ACCESS_KEY_ID', passwordVariable: 'AWS_SECRET_ACCESS_KEY']]) {
+                dir('terraformECR') {
+                    sh "terraform init"
+                    sh "terraform apply --auto-approve"
+              }  
+              }
+            }
+        }
     }
 }
