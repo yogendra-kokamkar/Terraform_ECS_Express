@@ -15,5 +15,12 @@ pipeline{
              }
             }
         }
+
+        stage('Build'){
+            steps{
+                sh "docker build -t expressapp:latest ."
+                sh "docker images"
+            }
+        }
     }
 }
