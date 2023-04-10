@@ -7,5 +7,12 @@ pipeline{
                 git url: 'git@github.com:yogendra-kokamkar/Terraform_ECS_Express.git', branch: 'main'
             }
         }
+
+        stage('Connect to docker server'){
+            steps{
+            sshagent(credentials: ['dockerEc2Server']) {
+                sh "pwd"
+            }
+        }
     }
 }
