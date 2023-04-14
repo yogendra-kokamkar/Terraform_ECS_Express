@@ -10,7 +10,7 @@ Prerequisites:
    -  Docker Server
    -  Terraform Server
    -  AWS Account
-   Note : For this project, all the servers are setup in a single EC2 instance.
+   -  Note : For this project, all the servers are setup in a single EC2 instance.
  
  Steps:
 
