@@ -1,5 +1,5 @@
 # Deploy a simple nodejs express application on AWS ECS cluster using Jenkins for CICD and Terraform for IaaC
-![image](https://github.com/yogendra-kokamkar/Terraform_ECS_Express/blob/main/Terraform-ECS-Express.jpg)
+![image](https://github.com/yogendra-kokamkar/Terraform_ECS_Express/blob/main/diagram.jpg)
 
 Here are the step-by-step details to set up an end-to-end Jenkins pipeline for a NodeJS express application using Docker, Terraform, AWS ECR and AWS ECS:
 
